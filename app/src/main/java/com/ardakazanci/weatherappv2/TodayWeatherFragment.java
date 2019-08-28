@@ -122,7 +122,6 @@ public class TodayWeatherFragment extends Fragment {
                         }, new Consumer<Throwable>() {
                             @Override
                             public void accept(Throwable throwable) throws Exception {
-
                                 Toast.makeText(getActivity(), "" + throwable.getMessage(), Toast.LENGTH_SHORT).show();
                                 Log.e("API Connect Error", throwable.getMessage());
                             }

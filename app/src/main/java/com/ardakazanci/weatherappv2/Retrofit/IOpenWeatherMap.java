@@ -20,4 +20,7 @@ public interface IOpenWeatherMap {
                                   @Query("appid") String appid,
                                   @Query("units") String unit);
 
+    @GET('forecast')
+    Observable<WeatherForecastResult> getWeat
+
 }
