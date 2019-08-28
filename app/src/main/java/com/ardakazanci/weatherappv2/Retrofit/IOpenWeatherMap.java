@@ -1,5 +1,6 @@
 package com.ardakazanci.weatherappv2.Retrofit;
 
+import com.ardakazanci.weatherappv2.Model.FiveDays.WeatherForecastResult;
 import com.ardakazanci.weatherappv2.Model.WeatherResult;
 
 import io.reactivex.Observable;
@@ -16,11 +17,15 @@ public interface IOpenWeatherMap {
      */
     @GET("weather")
     Observable<WeatherResult> getWeatherByLatLng(@Query("lat") String lat,
-                                  @Query("lon") String lng,
-                                  @Query("appid") String appid,
-                                  @Query("units") String unit);
+                                                 @Query("lon") String lng,
+                                                 @Query("appid") String appid,
+                                                 @Query("units") String unit);
 
-    @GET('forecast')
-    Observable<WeatherForecastResult> getWeat
+    @GET("forecast")
+    Observable<WeatherForecastResult> getForecastWeatherByLatLng(@Query("lat") String lat,
+                                                                 @Query("lon") String lng,
+                                                                 @Query("appid") String appid,
+                                                                 @Query("units") String unit);
+
 
 }

@@ -3,7 +3,7 @@ package com.ardakazanci.weatherappv2.Model;
 public class Main {
 
     private double temp;
-    private double pressure;
+    private float pressure;
     private int humidity;
     private double temp_min;
     private double temp_max;
@@ -25,7 +25,7 @@ public class Main {
         return pressure;
     }
 
-    public void setPressure(double pressure) {
+    public void setPressure(float pressure) {
         this.pressure = pressure;
     }
 
