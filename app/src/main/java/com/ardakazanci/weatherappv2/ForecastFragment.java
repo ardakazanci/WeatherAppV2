@@ -39,11 +39,7 @@ public class ForecastFragment extends Fragment {
     RecyclerView recyclerView_forecast;
 
 
-    @Override
-    public void onStop() {
-        compositeDisposable.clear();
-        super.onStop();
-    }
+
 
     static ForecastFragment instance;
 
@@ -121,6 +117,18 @@ public class ForecastFragment extends Fragment {
         WeatherForecastAdapter adapter = new WeatherForecastAdapter(getContext(), weatherForecastResult);
         recyclerView_forecast.setAdapter(adapter);
 
+    }
+
+    @Override
+    public void onDestroy() {
+        compositeDisposable.clear();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onStop() {
+        compositeDisposable.clear();
+        super.onStop();
     }
 
 }
